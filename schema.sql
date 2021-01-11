@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS peer_2_paws;
-
-CREATE DATABASE peer_2_paws;
