@@ -63,3 +63,17 @@ h4,
   left: 25%;
   /* transform: (-50%, -50%); */
 /* } */
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
