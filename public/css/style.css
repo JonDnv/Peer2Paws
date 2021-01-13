@@ -42,27 +42,15 @@ h4,
   text-align: center;
 }
 
+#applyForm,
+#applyBtn {
+  margin-left: 10px;
+}
+
 .responsive-img {
   margin-left: 50%;
   position: relative;
 }
-
-/* .hero-image {
-  background-image: url("https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.hero-text {
-  color: rgb(58, 117, 58);
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  /* transform: (-50%, -50%); */
-/* } */
 
 .label {
   font-weight: bold;
