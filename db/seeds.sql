@@ -1,5 +1,5 @@
 INSERT INTO
-  peer_2_paws.PetType (TypeName)
+  peer_2_paws.PetTypes (TypeName)
 VALUES
   ("Dog"),
   ("Cat"),
@@ -7,7 +7,7 @@ VALUES
   ("Rodent"),
   ("Reptile");
 INSERT INTO
-  peer_2_paws.OwnerInfo (OwnerEmail, OwnerName)
+  peer_2_paws.Owners (OwnerEmail, OwnerName)
 VALUES
   ("jsmith@gmail.com", "John Smith"),
   ("abryant@yahoo.com", "Adam Bryant"),
@@ -18,7 +18,7 @@ VALUES
   ("jwessex@p2p.com", "Jon Wessex"),
   ("adamsmith@ecom.edu", "Adam Smith");
 INSERT INTO
-  peer_2_paws.AnimalInfo (AnimalName, OwnerID, TypeID, Age, About)
+  peer_2_paws.Animals (AnimalName, OwnerID, TypeID, Age, About)
 VALUES
   (
     "Rex",
