@@ -1,7 +1,7 @@
 {
   "name": "Virtual_pets",
   "version": "1.0.0",
-  "description": "",
+  "description": "Peer to Peer Pet Adoption Application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +15,14 @@
     "express-handlebars": "^5.2.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonDnv/Peer2Paws.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonDnv/Peer2Paws/issues"
+  },
+  "homepage": "https://github.com/JonDnv/Peer2Paws#readme"
 }
