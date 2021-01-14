@@ -6,11 +6,8 @@ html {
 body {
   background: url("../images/whiteBkgrd.jpg") no-repeat center fixed;
   background-size: cover;
+  text-align: center;
 }
-
-/* .container-fluid {
-  display: flexbox;
-} */
 
 #navBar {
   padding-left: 20px;
@@ -28,6 +25,7 @@ h4,
 
 .row {
   margin-top: 10px;
+  text-align: center;
 }
 
 #side-bar {
@@ -43,7 +41,10 @@ h4,
 }
 
 #applyForm,
-#applyBtn {
+#signinForm,
+#postForm,
+#applyBtn,
+#postBtn {
   margin-left: 10px;
 }
 

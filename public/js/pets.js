@@ -1,4 +1,8 @@
 // document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.slider');
-//     var instances = M.Slider.init(elems, options);
-//   });
+//     const elems = document.querySelectorAll('.carousel');
+//     const instance = M.Carousel.init(elems, options);
+// });
+
+// var instance = M.Carousel.init({
+//   fullWidth: true
+// });
