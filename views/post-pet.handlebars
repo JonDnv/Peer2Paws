@@ -1,5 +1,57 @@
-{{> navbar-partial }}
+{{> navbar-partial}}
 
-<div>
-    Form/info for user to post pet here
-</div>
+<div class="row">
+
+    {{> sidebar-partial}}
+
+    <div class="container-fluid col s12 m8 l9" id="postForm">
+        {{!-- Application to join here? --}}
+        <h2>Pet Information</h2>
+        <form id="apply">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="owner_first_name" type="text" class="validate">
+                            <label for="owner_first_name"> Owner First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="owner_last_name" type="text" class="validate">
+                            <label for="owner_last_name">Owner Last Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="post_pet_name" type="text" class="validate">
+                            <label for="post_pet_name">Pet Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="post_pet_type" type="text" class="validate">
+                            <label for="post_pet_type">Pet Type (Dog, Cat, Reptile, Bird, Rodent)</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="post_pet_age" type="text" class="validate">
+                            <label for="post_pet_age">Pet Age</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="pet_about" type="text" class="validate">
+                            <label for="pet_about">About the Pet: (Temperament, gets along with other animals,
+                                etc.)</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="post_pet_email" type="text" class="validate">
+                            <label for="post_pet_email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="post_number" type="text" class="validate">
+                            <label for="post_number">Phone Number</label>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action" id="postBtn">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+
+            </div>
+
+
+        </form>
+
+    </div>

@@ -1,0 +1,41 @@
+{{> navbar-partial}}
+
+<div class='row'>
+
+    {{> sidebar-partial}}
+    <div class="container-fluid col s12 m8 l9" id="applyForm">
+        {{!-- Show sign-in info here --}}
+        <h2>Join our network!</h2>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="username" type="text" class="validate">
+                        <label for="username">Create a username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="pw_create" type="text" class="validate">
+                        <label for="pw_create">Create a Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="pw_verify" type="text" class="validate">
+                        <label for="pw_verify">Confirm Password</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="verifyBtn">Join!
+                    <i class="material-icons right">account_circle</i>
+                </button>
+
+        </div>
+    </div>
+</div>

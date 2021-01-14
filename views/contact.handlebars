@@ -1,5 +1,35 @@
-{{> navbar-partial }}
+{{> navbar-partial}}
 
-<div>
-    Place contact form here???
-</div>
+<div class="row">
+
+    {{> sidebar-partial}}
+
+    <div class="container-fluid col s12 m8 l9" id="applyForm">
+        {{!-- Application to join here? --}}
+        <h2>Contact Us!</h2>
+        <form class="col m8 offset-m2 s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="form-input">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="message" class="materialize-textarea"></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col m12">
+                    <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button"
+                            name="action">Send Message</button></p>
+                </div>
+            </div>
+        </form>
+
+    </div>
