@@ -1,8 +1,3 @@
-let obj = {
-    cats: "meow",
-    dogs: "woof"
-}
-
 
 module.exports = function(app) {
     //Routes for different pages - NAV BAR
