@@ -31,9 +31,4 @@ module.exports = function(app) {
     app.get("/apply", (req,res) => {
         res.render("apply")
     });
-
-    //Route to sign-up 
-    app.get('/join', (req, res) => {
-        res.render('join')
-    });
 }

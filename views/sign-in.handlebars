@@ -3,29 +3,35 @@
 <div class='row'>
 
     {{> sidebar-partial}}
-    <div class="container-fluid col s12 m8 l9" id="signinForm">
+    <div class="container-fluid col s12 m8 l9" id="applyForm">
         {{!-- Show sign-in info here --}}
-        <h2>Sign In:</h2>
+        <h2>Join our network!</h2>
+        <p>Enter your name and email to receive weekly updates about our eligible pets!</p>
         <div class="row">
-            <form class="col s12">
+            <form class="col m8 offset-m2 s12">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Username</label>
+                    <div class="input-field col s12">
+                        <input id="news-first-name" type="text" class="validate">
+                        <label for="news-first-name">First Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Password</label>
+                    <div class="input-field col s12">
+                        <input id="news-last-name" type="text" class="validate">
+                        <label for="news-last-name">Last Name</label>
                     </div>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action" id="applyBtn">Login
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="verifyBtn">Send me pet
+                    updates!
                     <i class="material-icons right">account_circle</i>
                 </button>
-                <a class="btn waves-effect waves-light" id="signupBtn" href="join"> Go to Sign-up
-                    <i class="material-icons">contact_mail</i>
-                </a>
+
         </div>
     </div>
 </div>
