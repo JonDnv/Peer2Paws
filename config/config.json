@@ -9,15 +9,15 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "peer_2_paws",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "b985fc56a5ce1b",
+    "password": "c149c965",
+    "database": "heroku_bd0a9ea348ddeff",
+    "host": "us-cdbr-east-03.cleardb.com",
     "dialect": "mysql"
   }
 }
