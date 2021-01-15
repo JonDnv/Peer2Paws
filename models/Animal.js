@@ -1,7 +1,17 @@
-
-
 module.exports = function (sequelize, DataTypes) {
   var Animal = sequelize.define("Animal", {
+    TypeName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    OwnerName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    OwnerEmail: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     AnimalName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -11,24 +21,13 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     About: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
+    ImageLink: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   });
-  Animal.associate = (models) => {
-    Animal.belongsTo(models.Owner, {
-      foreignKey: {
-        allowNull: false,
-      },
-    });
-  };
-  Animal.associate = (models) => {
-    Animal.belongsTo(models.PetType, {
-      foreignKey: {
-        allowNull: false,
-      },
-    });
-  };
-
   return Animal;
 };
