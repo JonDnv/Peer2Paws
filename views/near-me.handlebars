@@ -1,0 +1,30 @@
+{{> navbar-partial}}
+
+<div class="row">
+
+    {{> sidebar-partial}}
+
+    <div class="container-fluid col s12 m8 l9" id="sheltersForm">
+        <h2>View Shelters Near Me</h2>
+        <form class="col m8 offset-m2 s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text">
+                    <label for="name">Enter your zip code to view shelters in your area:</label>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col m12">
+                    <a class="btn waves-effect waves-light" type="submit" name="action" id="sheltersBtn"
+                        href="near-me">View
+                        Shelters!
+                        <span class="material-icons right">location_city</span>
+                    </a>
+                </div>
+            </div>
+        </form>
+
+    </div>
