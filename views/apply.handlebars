@@ -1,61 +1,54 @@
-
-<link rel="stylesheet" href="../public/css/style.css">
-
 {{> navbar-partial}}
-{{> sidebar-partial}}
 
-<div>
+<div class="row">
+
+  {{> sidebar-partial}}
+
+  <div class="container-fluid col s12 m8 l9" id="applyForm">
     {{!-- Application to join here? --}}
-<h2>Apply Here!</h2>
-<form id="apply">
-  <div class="row">
-    <form class="col s12">
+    <h2>Apply Here!</h2>
+    <p>Please note: After you enter your preliminary information, one of our adoption and placement experts will reach
+      out with further screening so we can find the best matches for our clients and our pets!</p>
+    <form id="apply">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="pet_name" type="text" class="validate">
-          <label for="pet_name">Pet Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="pet_id" type="text" class="validate">
-          <label for="pet_id">Pet ID</label>
-        </div>
-          <div class="input-field col s6">
-          <input id="email" type="text" class="validate">
-          <label for="email">Email</label>
-        </div>
-          <div class="input-field col s6">
-          <input id="number" type="text" class="validate">
-          <label for="number">Phone Number</label>
-        </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="pet_name" type="text" class="validate">
+              <label for="pet_name">Pet Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="pet_id" type="text" class="validate">
+              <label for="pet_id">Pet ID</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="email" type="text" class="validate">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="number" type="text" class="validate">
+              <label for="number">Phone Number</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="goodMatch" type="text" class="validate">
+              <label for="goodMatch">Tell us why you think you're a good match for our pets!</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action" id="applyBtn">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+
       </div>
 
-    {{!-- <div class='form-group'>
-        <label for="name">First Name</label>
-        <input type='text' id='firstName' name='name'>
-  
-        <label for="name">Middle Name</label>
-        <input type='text' id='middleName' name='name'>
 
-        <label for="name">Last Name</label>
-        <input type='text' id='lastName' name='name'>
+    </form>
 
-        <label for="name">Pet ID</label>
-        <input type='text' id='petId' name='number'>
-    </div> --}}
-
-</form>
-
-{{!-- <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script> --}}
   </div>
-

@@ -41,4 +41,3 @@ app.get("api/Pets/:petid?, function (req, res")
             return res.json(result);
         });
     }
-

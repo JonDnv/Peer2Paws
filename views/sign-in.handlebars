@@ -1,5 +1,47 @@
 {{> navbar-partial}}
 
-<div>
-    Show sign-in info here
+<div class='row'>
+
+    {{> sidebar-partial}}
+    <div class="container-fluid col s12 m8 l9" id="applyForm">
+        {{!-- Show sign-in info here --}}
+        <h2>Join our network!</h2>
+        <p>Enter your name and email to receive weekly updates about our eligible pets!</p>
+        <div class="row">
+            <form class="col m8 offset-m2 s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="news-first-name" type="text" class="validate">
+                        <label for="news-first-name">First Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="news-last-name" type="text" class="validate">
+                        <label for="news-last-name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="verifyBtn">Send me pet
+                    updates!
+                    <i class="material-icons right">account_circle</i>
+                </button>
+                <hr>
+                <div class="row">
+                    <p style="font-size: 20px;">Don't see a pet match for you? That's okay! Check out shelters near you
+                        to browse other available
+                        animals who need a fur-ever home!</p>
+                    <a class="btn waves-effect waves-light" type="submit" name="action" id="verifyBtn" href="near-me">
+                        Find a
+                        shelter near me
+                        <i class="material-icons right">location_city</i>
+                    </a>
+                </div>
+        </div>
+    </div>
 </div>

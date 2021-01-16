@@ -1,5 +1,10 @@
 {{> navbar-partial}}
 
-<div>
-    Show pets here
+<div class="row">
+    {{sidebar-partial}}
+    <h1>See All Our Pets</h1>
+    <ul>
+        {{#each Animal, Animal.AnimalName}}
+        {{/each}}
+    </ul>
 </div>

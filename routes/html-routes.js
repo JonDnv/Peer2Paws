@@ -1,8 +1,3 @@
-let obj = {
-    cats: "meow",
-    dogs: "woof"
-}
-
 
 module.exports = function(app) {
     //Routes for different pages - NAV BAR
@@ -24,11 +19,20 @@ module.exports = function(app) {
         res.render("see-all")
     });
 
+    app.get("/specificpets", (req, res) => {
+        res.render("specificpets")
+    });
+
     app.get("/post-pet", (req,res) => {
         res.render("post-pet")
     });
 
     app.get("/apply", (req,res) => {
         res.render("apply")
+    });
+
+    //View nearby shelters route
+    app.get("/near-me", (req, res) => {
+        res.render("near-me")
     });
 }
