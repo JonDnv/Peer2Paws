@@ -1,10 +1,21 @@
 {{> navbar-partial}}
 
+
 <div class="row">
-    {{sidebar-partial}}
+
+    {{> sidebar-partial}}
+
     <h1>See All Our Pets</h1>
-    <ul>
-        {{#each Animal, Animal.AnimalName}}
+
+    <h2 id='Animal'>
+        {{#each Animal}}
+        <p>{{this.Animal.AnimalName}}</p>
         {{/each}}
-    </ul>
+    </h2>
+
+
+    <h2>
+        {{!-- {{Animal}} --}}
+     
+    </h2>
 </div>
