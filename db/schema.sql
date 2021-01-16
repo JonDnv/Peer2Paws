@@ -8,6 +8,7 @@ CREATE TABLE PetType (
 );
 USE peer_2_paws;
 DROP TABLE IF EXISTS OwnerInfo;
+
 CREATE TABLE OwnerInfo (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   OwnerName TEXT NOT NULL,
