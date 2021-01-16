@@ -99,8 +99,8 @@ VALUES
     CURDATE(),
     CURDATE()
   )
-INSERT INTO
-  EmailRecepients (RecName, RecEmail, createdAt, updatedAt)
+INSERT INTO 
+  peer_2_paws.EmailRecepients (RecName, RecEmail, createdAt, updatedAt)
 VALUES
   (
     "John Smith",

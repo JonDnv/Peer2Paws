@@ -1,8 +1,12 @@
-const Animals = require("../models/Animal");
+// const app = express();
+const Animals = require('../models');
 const EmailRecepient = require("../models/EmailRecepient");
 
-module.exports = function (app) {
-  app.get("/api/see-all", (req, res) => {
-    Animals.findAll({}).then((results) => res.json(results));
-  });
+module.exports = (app) => {
+  app.get('/see-all', (req, res) => {
+    Animals.Animal.findAll()
+    .then((Animal) => res.json(Animal))
+    })
 };
+
+  

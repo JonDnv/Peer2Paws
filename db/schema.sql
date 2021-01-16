@@ -12,7 +12,7 @@ CREATE TABLE Animals (
   About VARCHAR (512) NOT NULL,
   ImageLink VARCHAR (1024) NULL,
   createdAt DATETIME NOT NULL,
-  updatedAd DATETIME NOT NULL
+  updatedAt DATETIME NOT NULL
 );
 DROP TABLE IF EXISTS EmailRecepients;
 CREATE TABLE EmailRecepients (
@@ -21,4 +21,4 @@ CREATE TABLE EmailRecepients (
   RecEmail VARCHAR (128),
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL
-)
+);
