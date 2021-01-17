@@ -35,3 +35,6 @@ db.sequelize.sync().then(() => {
     console.log(`App listening on http://localhost:${PORT}`)
   );
 });
+
+const favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/public/images/favicon.png'))
