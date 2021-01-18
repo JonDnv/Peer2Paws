@@ -15,7 +15,7 @@ module.exports = function(app) {
 
     //Routes for different pages - SIDE BAR
     
-    app.get("/see-all", (req, res)=> {
+    app.get("/api/see-all", (req, res)=> {
         res.render("see-all")
     });
 
