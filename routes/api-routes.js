@@ -3,7 +3,7 @@ const EmailRecepient = require("../models/EmailRecepient");
 
 module.exports = (app) => {
 //JK--API call to view and render all pets--//
-  app.get('/api/see-all', (req, res) => {
+  app.get('/see-all', (req, res) => {
     Animals.Animal.findAll()
     .then((Animal) => {
       console.log(JSON.parse(JSON.stringify(Animal)))
