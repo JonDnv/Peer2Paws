@@ -7,15 +7,17 @@
 
     <h1>See All Our Pets</h1>
 
-    <h2 id='Animal'>
+    <ul class="col s7 push-s1">
         {{#each Animal}}
-        <p>{{AnimalName}}</p>
+        <p id="petsCard">
+            Type: {{TypeName}}<br>
+            Name: {{AnimalName}}<br>
+            Age: {{Age}}<br>
+            About: {{About}}<br>
+            Owner: {{OwnerName}}<br>
+            Email: {{OwnerEmail}}<br>
+        </p>
         {{/each}}
-    </h2>
+    </ul>
 
-
-    <h2>
-        {{!-- {{Animal}} --}}
-     
-    </h2>
 </div>

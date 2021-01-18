@@ -69,3 +69,10 @@ p,
 .form-group {
   margin-bottom: 5px;
 }
+
+#petsCard {
+  text-align: left;
+  border: solid 1px black;
+  margin: 5px;
+  padding: 5px;
+}
