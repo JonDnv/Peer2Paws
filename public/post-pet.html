@@ -1,8 +1,26 @@
-{{> navbar-partial}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Pet</title>
+    <link href="../../public/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
+    <script src="css/style.css"></script>
+</head>
+<body>
+    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<div class="row">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
 
-    {{> sidebar-partial}}
 
     <div class="container-fluid col s12 m8 l9" id="postForm">
         <h2>Pet Information</h2>
@@ -30,10 +48,6 @@
                             <input id="OwnerEmail" type="text" class="validate">
                             <label for="post_pet_email">Email</label>
                         </div>
-                        {{!-- <div class="input-field col s6">
-                            <input id="post_number" type="text" class="validate">
-                            <label for="post_number">Phone Number</label>
-                        </div> --}}
                         <div class="input-field col s6">
                             <input id="About" type="text" class="validate">
                             <label for="pet_about">About the Pet: (Temperament, gets along with other animals,
@@ -50,5 +64,8 @@
 
 
         </form>
-        <script src="../public/js/add.js" type="text/javascript"></script>
-    </div>
+</body>
+
+<script src="./js/add.js"></script>
+
+</html>

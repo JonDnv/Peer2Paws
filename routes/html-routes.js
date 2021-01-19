@@ -1,34 +1,36 @@
-module.exports = function (app) {
-  //Routes for different pages - NAV BAR
-  app.get("/", (req, res) => {
-    res.render("index");
-  });
+const path = require('path');
 
-  app.get("/sign-in", (req, res) => {
-    res.render("sign-in");
-  });
+module.exports = function(app) {
+    //Routes for different pages - NAV BAR
+    app.get("/", (req, res) => {
+        res.render("index")
+    });
 
-  app.get("/contact", (req, res) => {
-    res.render("contact");
-  });
+    app.get("/sign-in", (req, res) => {
+        res.render("sign-in")
+    });
 
-  //Routes for different pages - SIDE BAR
+    app.get("/contact", (req, res)=> {
+        res.render("contact")
+    });
 
-  app.get("/see-all", (req, res) => {
-    res.render("see-all");
-  });
+    //Routes for different pages - SIDE BAR
+    
+    app.get("/api/see-all", (req, res)=> {
+        res.render("see-all")
+    });
 
-  app.get("/specificpets", (req, res) => {
-    res.render("specificpets");
-  });
+    app.get("/specificpets", (req, res) => {
+        res.render("specificpets")
+    });
 
-  app.get("/post-pet", (req, res) => {
-    res.render("post-pet");
-  });
+    app.get("/post-pet", (req,res) => {
+        res.sendFile(path.join(__dirname, '../public/post-pet.html'))
+    });
 
-  app.get("/apply", (req, res) => {
-    res.render("apply");
-  });
+    app.get("/apply", (req,res) => {
+        res.render("apply")
+    });
 
   //View cat breed route
   app.get("/cat-breed", (req, res) => {

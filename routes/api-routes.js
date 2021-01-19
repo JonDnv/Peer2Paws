@@ -1,5 +1,6 @@
+// const { default: ModelManager } = require('sequelize/types/lib/model-manager');
 const Animals = require('../models');
-const EmailRecepient = require("../models/EmailRecepient");
+const EmailRecepient = require("../models");
 
 module.exports = (app) => {
 //JK--API call to view and render all pets--//
@@ -14,12 +15,26 @@ module.exports = (app) => {
     );
     });
 
+//JK--API call to view and render specific types--//
+// app.get('/specificpets', (req, res) => {
+//   if (req.params.Animals) {
+//     Animals.Animal.map({
+//       where: {
+//         routeName: req.params.Animal
+//       }
+//     }).then((result) => res.json(result))
+//     res.render('see-all', {
+//       Animal: JSON.parse(JSON.stringify(req.params.Animal))
+//     })
+//   }
+// });
+
 
 //JK--API call to post a pet for adoption--//
 app.post('/api/post-pet', (req, res) => {
   console.log('New Pet added!');
 
-  const animal = JSON.parse(Animals);
+  const animal = req.body;
   const routeName = animal.AnimalName.replace(/\s+/g, '').toLowerCase();
 
   Animals.Animal.create({
@@ -33,6 +48,19 @@ app.post('/api/post-pet', (req, res) => {
   });
   res.status(200).json(animal);
 });
+
+//JK--API call to Sign up for Alerts--//
+app.post('/api/sign-in', (req, res) => {
+  console.log('New Member added');
+
+  const member = EmailRecepient;
+
+  EmailRecepient.member.create({
+    Name: member.RecName,
+    Email: member.RecEmail,
+  });
+  res.status(200).json(member)
+})
 };
 
 
