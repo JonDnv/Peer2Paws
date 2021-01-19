@@ -1,9 +1,4 @@
-// //JK--Handlebars attached after DOM fully loads--//
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     if (event) {
-//       console.info('DOM loaded');
-//     }
-// });
+
 
 //JK--Setting up listener for adding Pet for Adoption--//
 const submitPetBtn = document.getElementById('postBtn');
@@ -37,7 +32,7 @@ fetch('/api/post-pet', {
     .catch((error) => {
         console.error('Error:', error);
         alert(error);
-    });
+
 
 //JK--Clear the content of the input fields--//
 document.getElementById('OwnerName').value = '';
@@ -47,4 +42,5 @@ document.getElementById('Age').value = '';
 document.getElementById('OwnerEmail').value = '';
 document.getElementById('About').value = '';
 
+})
 });

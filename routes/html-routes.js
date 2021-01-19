@@ -1,3 +1,4 @@
+const path = require('path');
 
 module.exports = function(app) {
     //Routes for different pages - NAV BAR
@@ -24,7 +25,7 @@ module.exports = function(app) {
     });
 
     app.get("/post-pet", (req,res) => {
-        res.render("post-pet")
+        res.sendFile(path.join(__dirname, '../public/post-pet.html'))
     });
 
     app.get("/apply", (req,res) => {
