@@ -1,23 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "A55hole!",
-    "database": "peer_2_paws",
-    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "peer_2_paws",
-    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "erm1pht34xd0zhwa",
-    "password": "n47ae8wtn2xfgx4k",
-    "database": "lzf14b8tvyzdv936",
-    "host": "lfmerukkeiac5y5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
