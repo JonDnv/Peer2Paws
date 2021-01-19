@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //JK--FETCH CALL TO GRAB ALL PETS--//
 
-fetch('api/see-all', {
+fetch('/see-all', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

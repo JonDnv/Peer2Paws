@@ -5,17 +5,23 @@
 
     {{> sidebar-partial}}
 
-    <h1>See All Our Pets</h1>
+    <div class="container-fluid col s12 m8 l9">
 
-    <h2 id='Animal'>
-        {{#each Animal}}
-        <p>{{AnimalName}}</p>
-        {{/each}}
-    </h2>
+        <h2>See All Our Pets</h2>
 
+        <ul class="col s7 push-s1">
+            {{#each Animal}}
+            <p id="petsCard">
+                Type: {{TypeName}}<br>
+                Name: {{AnimalName}}<br>
+                Age: {{Age}}<br>
+                About: {{About}}<br>
+                Owner: {{OwnerName}}<br>
+                Email: {{OwnerEmail}}<br>
+            </p>
+            {{/each}}
+        </ul>
 
-    <h2>
-        {{!-- {{Animal}} --}}
-     
-    </h2>
+    </div>
+
 </div>
