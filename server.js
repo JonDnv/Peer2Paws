@@ -30,8 +30,8 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-require('./routes/api-routes.js')(app);
-require('./routes/html-routes.js')(app);
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {
@@ -40,5 +40,12 @@ db.sequelize.sync().then(() => {
   );
 });
 
-const favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/public/images/favicon.png'))
+const favicon = require("serve-favicon");
+app.use(favicon(__dirname + "/public/images/favicon.png"));
+
+// console.log(process.env.CATAPI);
+// console.log(process.env.DOGAPI);
+// console.log(process.env.DBHOST);
+// console.log(process.env.DBNAME);
+// console.log(process.env.DBUSER);
+// console.log(process.env.DBPASSWORD);

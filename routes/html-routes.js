@@ -32,8 +32,13 @@ module.exports = function(app) {
         res.render("apply")
     });
 
-    //View nearby shelters route
-    app.get("/near-me", (req, res) => {
-        res.render("near-me")
-    });
-}
+  //View cat breed route
+  app.get("/cat-breed", (req, res) => {
+    res.render("catbreed");
+  });
+
+  //View dog breed route
+  app.get("/dog-breed", (req, res) => {
+    res.render("dogbreed");
+  });
+};
