@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 
 const db = require('./models');
 const bodyparser = require('body-parser');
-// const db = require("./models");
+// const seed = require("./seed")
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -39,6 +39,12 @@ db.sequelize.sync().then(() => {
     console.log(`App listening on http://localhost:${PORT}`)
   );
 });
+
+// function runSeed(){
+//   seed.addDog()
+// }
+
+// runSeed()
 
 const favicon = require("serve-favicon");
 app.use(favicon(__dirname + "/public/images/favicon.png"));
