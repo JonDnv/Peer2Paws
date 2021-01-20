@@ -71,8 +71,13 @@ p,
 }
 
 #petsCard {
-  text-align: left;
+  text-align: center;
   border: solid 1px black;
+  border-radius: 5px;
   margin: 5px;
   padding: 5px;
+}
+
+#animalRow {
+  margin-left: 100px;
 }

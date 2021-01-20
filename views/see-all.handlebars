@@ -9,10 +9,10 @@
 
         <h2>See All Our Pets</h2>
 
-        <ul class="col s7 push-s1">
+        <ul class="col s7 push-s1" id="animalRow">
             {{#each Animal}}
             <p id="petsCard">
-                <img src="{{ImageLink}}">
+                <img src="{{ImageLink}}"><br>
                 Type: {{TypeName}}<br>
                 Name: {{AnimalName}}<br>
                 Age: {{Age}}<br>

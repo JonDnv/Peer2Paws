@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Your Pet</title>
-    <link href="../../public/images/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    {{!--
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"> --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="/js/add.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link href="../../public/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
-    <script src="css/style.css"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png"> -->
 </head>
 <body>
     
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
-
-
+    <nav>
+        <div class="nav-wrapper #607d8b blue-grey z-depth-3" id="navBar">
+            <a href="#" class="brand-logo">Peer 2 Paws</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="sign-in">Get Updates/Sign-up</a></li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid col s6 m3 l2 z-depth-3" id="side-bar">
+        <h4>Menu</h4>
+        <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtna" href="see-all">
+            <span class="material-icons">pets</span> See All Pets
+        </a>
+        <hr>
+        <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn1" href="specificpets">
+            <span class="material-icons">pets</span>Pets by Type
+        </a>
+        <hr>
+        <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn2" href="post-pet">
+            <span class="material-icons">pets</span> Post Your Pet
+        </a>
+        <hr>
+        <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn3" href="apply">
+            <span class="material-icons">pets</span> Apply to Adopt
+        </a>
+        <hr>
+        
+    </div>
+    
     <div class="container-fluid col s12 m8 l9" id="postForm">
         <h2>Pet Information</h2>
         <form id="apply">
@@ -52,20 +88,25 @@
                             <input id="About" type="text" class="validate">
                             <label for="pet_about">About the Pet: (Temperament, gets along with other animals,
                                 etc.)</label>
+                            </div>
                         </div>
-                    </div>
-                    <div></div>
-                    <button class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                        <div></div>
+                        <button class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
                         id="postBtn">Submit
                         <i class="material-icons right">send</i>
                     </button>
-
-            </div>
-
-
+                    
+                </div>
+                
+                
         </form>
-</body>
+    </body>
+    
+    <script src="./js/add.js"></script>
 
-<script src="./js/add.js"></script>
-
-</html>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
+    
+    </html>
+    
