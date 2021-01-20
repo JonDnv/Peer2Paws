@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 
-const db = require('./models');
-const bodyparser = require('body-parser');
+const db = require("./models");
+const bodyparser = require("body-parser");
 // const seed = require("./seed")
 
 // Sets up the Express app to handle data parsing
@@ -40,18 +40,5 @@ db.sequelize.sync().then(() => {
   );
 });
 
-// function runSeed(){
-//   seed.addDog()
-// }
-
-// runSeed()
-
 const favicon = require("serve-favicon");
 app.use(favicon(__dirname + "/public/images/favicon.png"));
-
-// console.log(process.env.CATAPI);
-// console.log(process.env.DOGAPI);
-// console.log(process.env.DBHOST);
-// console.log(process.env.DBNAME);
-// console.log(process.env.DBUSER);
-// console.log(process.env.DBPASSWORD);
