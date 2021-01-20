@@ -1,30 +1,63 @@
-# Peer2Paws
-Peer to Peer Pet Adoption Application
+# Peer-2-Paws
 
-<!-- 1. GiHub Repo hosted by Jon G -->
-   
-2. Functionality
-   1. Add Pet
-   2. Update Pet Info
-   3. Delete Pet Info
-   4. View All Pets (Home Page)
-   5. Click on Individual Pet for More Details
+---
 
-3. Database Content
-   <!-- 1. Pet Name -->
-   <!-- 2. Pet Type (Dogs / Cats / Rodents / Reptiles / Birds) -->
-   <!-- 3. Pet Description (General Pet About) -->
-   <!-- 4. Pet Owner Info -->
-   5. Contact Owner Form for Pet
+This application utilizes multiple front and back-end packages including handlebars, sequelize, & vue.js to render a peer-2-peer pet adoption site. The site allows users to create a new pet entry when a pet is up for adoption and allows potential adopters to search for pets, register for updates, apply to adopt a pet, and research cat and dog breed information.
 
-<!-- 4. GitHub Repo File Structure Created By Jules -->
-   
-1. Separation of Responsibilities
-   1. HTML Main Page - Jules
-   2. Handlebars All Animals & Individual Animals Pages - Jon K
-   3. Add/Update/Delete Page - Gil
-   4. SQL Schema & Seed Data - Jon G
-   
-<!-- 6. SCRUM Meeting Schedule (Nightly @ 7:30PM) -->
-   
-7. Develop a User Story (TBD)
+---
+
+## Requirements
+
+GIVEN a pet adoption site \
+WHEN a user searches for pets \
+THEN the user is able to view all pets up for adoption \
+THEN the user can apply to adopt a pet \
+THEN the user can also apply for updates \
+AND the user can search for breed information to determine if the pet is a good fit \
+
+## Links
+
+* [Peer-2-Paws Application](https://peer-2-paws.herokuapp.com/)
+* [Github Repository](https://github.com/JonDnv/Peer2Paws)
+  
+---
+
+## Mock Up
+
+The following images shows the finished site:
+![Home Page](./assets/Peer-2-Paws.png)
+![See All Pets](./assets/Peer-2-Paws-SeeAll.png)
+![Pets By Type](./assets/Peer-2-Paws-PetByType.png)
+![Apply For Adoption](./assets/Peer-2-Paws-Apply.png)
+![Join / Sign Up](./assets/Peer-2-Paws-Join.png)
+
+---
+
+## Contributing Members
+
+* [Jon Godwin](https://github.com/JonDnv)
+* [Jon Keopangna](https://github.com/jkeopangna)
+* [Gil Orcilla](https://github.com/gilorcilla)
+* [Jules Wood](https://github.com/Juliannewood2413y)
+
+---
+
+## Contributing Technologies
+
+* [handlebars](https://handlebarsjs.com/)
+* [node.js](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/)
+* [Sequelize ORM](https://sequelize.org/)
+* [Vue.js](https://vuejs.org/)
+
+---
+
+## Change History
+
+ 1. Created Shell html, js, css & README files
+ 2. Created GitHub Pages site
+ 3. Created SQL schema & seed data
+ 4. Created handelbars layouts & partials
+ 5. Created Apply, Contact, Index, See-All, Specific Type pages
+ 6. Created API & HTML routes
+ 7. Created Cat & Dog Breed Info pages
