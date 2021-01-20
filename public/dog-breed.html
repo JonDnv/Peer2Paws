@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <nav>
+      <div class="nav-wrapper #607d8b blue-grey z-depth-3" id="navBar">
+        <a href="#" class="brand-logo" style="font-family: Salsa, cursive"
+          >Peer 2 Paws</a
+        >
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/" style="font-family: Salsa, cursive">Home</a></li>
+          <li>
+            <a href="signup" style="font-family: Salsa, cursive"
+              >Get Updates/Sign-up</a
+            >
+          </li>
+          <li>
+            <a href="contact" style="font-family: Salsa, cursive">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="app">
+      <v-app>
+        <v-content>
+          <v-container>
+            <v-layout align-center justify-center>
+              <v-flex xs6>
+                <v-select
+                  :items="breeds"
+                  item-text="name"
+                  v-model="selected_breed"
+                  label="Breeds"
+                  return-object
+                  attach
+                ></v-select>
+              </v-flex>
+            </v-layout>
+
+            <v-layout>
+              <v-flex xs12 sm8 offset-sm2>
+                <v-card>
+                  <v-carousel>
+                    <v-carousel-item
+                      v-for="(item,i) in images"
+                      :key="i"
+                      :src="item.url"
+                    ></v-carousel-item>
+                  </v-carousel>
+
+                  <v-card-title primary-title>
+                    <div class="text-xs-center"></div>
+                    <div>
+                      <v-avatar>
+                        <img
+                          :src="country_flag_url"
+                          :alt="selected_breed.country_code"
+                        />
+                      </v-avatar>
+                      <h3 class="headline mb-0">{{selected_breed.name}}</h3>
+                      <div style="text-align: center">
+                        {{selected_breed.description}}
+                      </div>
+                      <div>---</div>
+                      <div>
+                        <div><i>{{selected_breed.temperament}}</i></div>
+                      </div>
+                      <div>---</div>
+                      <div>
+                        <i>Weight: {{selected_breed.weight.imperial}} lbs</i>
+                      </div>
+                      <br />
+                      <div>
+                        <i>Height: {{selected_breed.height.imperial}} inches</i>
+                      </div>
+                      <br />
+                      <div>
+                        <i>Life Span: {{selected_breed.life_span}} years</i>
+                      </div>
+                      <br />
+                      <div><i>Bred For: {{selected_breed.bred_for}}</i></div>
+                      <br />
+                      <div>
+                        <i>Breed Group: {{selected_breed.breed_group}}</i>
+                      </div>
+                      <br />
+                    </div>
+                  </v-card-title>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-content>
+      </v-app>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: {
+          country_flag_url: "",
+          images: [],
+          breeds: [],
+          selected_breed: {},
+          current_image: {},
+        },
+        created() {
+          this.getBreeds();
+        },
+        watch: {
+          selected_breed: function () {
+            console.log(this.selected_breed);
+
+            let country_code = this.selected_breed.country_code.toLowerCase();
+
+            this.country_flag_url = `https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/flags/1x1/${country_code}.svg`;
+            this.getImages();
+          },
+        },
+        methods: {
+          async getBreeds() {
+            try {
+              axios.defaults.headers.common["x-api-key"] =
+                "a7aa7f7e-30a2-43f7-ad61-f96a71ce658c";
+              let response = await axios.get(
+                "https://api.thedogapi.com/v1/breeds/"
+              );
+              this.breeds = response.data;
+              console.log(
+                "-- (" + this.breeds.length + ") Breeds from TheDogAPI.com"
+              );
+              this.selected_breed = this.breeds[10];
+            } catch (err) {
+              console.log(err);
+            }
+          },
+          async getImages() {
+            try {
+              let query_params = {
+                breed_ids: this.selected_breed.id,
+                limit: 8,
+              };
+
+              let response = await axios.get(
+                "https://api.thedogapi.com/v1/images/search",
+                { params: query_params }
+              );
+
+              this.pagination_count = response.headers["pagination-count"];
+              this.images = response.data;
+              this.current_image = this.images[0];
+
+              console.log(
+                "-- (" + this.images.length + ") Images from TheDogAPI.com"
+              );
+              console.log(
+                this.pagination_count,
+                "images available for this query."
+              );
+            } catch (err) {
+              console.log(err);
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
