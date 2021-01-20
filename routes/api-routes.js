@@ -1,6 +1,6 @@
 // const { default: ModelManager } = require('sequelize/types/lib/model-manager');
 const Animals = require('../models');
-const EmailRecepient = require("../models");
+const EmailRecepients = require("../models");
 
 module.exports = (app) => {
 //JK--API call to view and render all pets--//
@@ -16,18 +16,16 @@ module.exports = (app) => {
     });
 
 //JK--API call to view and render specific types--//
-// app.get('/specificpets', (req, res) => {
-//   if (req.params.Animals) {
-//     Animals.Animal.map({
+// app.get('/api/:specificpets?', (req, res) => {
+//     Animals.Animal.findAll({
 //       where: {
-//         routeName: req.params.Animal
+//         routeName: req.params.Animals
 //       }
 //     }).then((result) => res.json(result))
-//     res.render('see-all', {
-//       Animal: JSON.parse(JSON.stringify(req.params.Animal))
-//     })
-//   }
-// });
+// })
+ 
+
+/////--API CALLS TO POST FROM FORMS @ FRONT END--/////
 
 
 //JK--API call to post a pet for adoption--//
@@ -50,12 +48,14 @@ app.post('/api/post-pet', (req, res) => {
 });
 
 //JK--API call to Sign up for Alerts--//
-app.post('/api/sign-in', (req, res) => {
+app.post('/api/signup', (req, res) => {
   console.log('New Member added');
 
-  const member = EmailRecepient;
+  const member = req.body;
+  const routeName = member.Name.replace(/\s+/g,'').toLowerCase();
 
-  EmailRecepient.member.create({
+  EmailRecepients.EmailRecepient.create({
+    routeName,
     Name: member.RecName,
     Email: member.RecEmail,
   });
@@ -65,53 +65,3 @@ app.post('/api/sign-in', (req, res) => {
 
 
 
-//     .then((Animal) => res.json({
-//       Animal: Animal
-//     }))
-//     })
-// };
-  
-
-// const db = require("../models/AnimalInfo.js");
-
-//Dependencies
-
-// const Pets = require("../models/AnimalInfo");
-
-// const Adoption_Form = require("../models/adoptionForm");
-
-// //Routes
-
-// module.exports = function (app) {
-//   app.get("/", function (req, res) {
-//     const data = { AnimalInfo: {}, OwnerInfo: {}, PetType: {} };
-//   });
-// };
-
-// Pets.findAll({}).then(function (result) {
-//   console.log(result);
-//   data.Pets = result;
-// });
-
-// res.render("index", {alldata: data});
-
-
-// //Searching for specific pet (or all pets) then provides JSON
-
-// app.get("api/Pets/:petid?, function (req, res")
-
-//     if (req.params.petid){
-
-//         Pets.findOne({
-//             where: {
-//                 id: req.params.petid
-//             }
-//         }).then(function {
-//             return res.json(result);
-//         });
-//     }
-//     else{
-//         Pets.findAll({}).then(function(result){
-//             return res.json(result);
-//         });
-    

@@ -32,7 +32,7 @@ fetch('/api/post-pet', {
     .catch((error) => {
         console.error('Error:', error);
         alert(error);
-
+    })
 
 //JK--Clear the content of the input fields--//
 document.getElementById('OwnerName').value = '';
@@ -42,5 +42,5 @@ document.getElementById('Age').value = '';
 document.getElementById('OwnerEmail').value = '';
 document.getElementById('About').value = '';
 
-})
+
 });
