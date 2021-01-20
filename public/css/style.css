@@ -50,7 +50,8 @@ p,
   text-align: center;
 }
 
-#postForm {
+#postForm,
+#mainContent {
   padding: 50px;
   text-align: center;
   margin-left: 30px;
@@ -86,4 +87,8 @@ p,
 
 #animalRow {
   margin-left: 100px;
+}
+
+#catBreedInfo {
+  margin-top: 18px;
 }
