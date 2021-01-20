@@ -13,41 +13,85 @@
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
-    <script src="css/style.css"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+     <!-- Begin nav bar -->
+     <nav>
+        <div class="nav-wrapper #607d8b blue-grey z-depth-3" id="navBar">
+            <a href="#" class="brand-logo">Peer 2 Paws</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="sign-in">Get Updates/Sign-up</a></li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- end nav bar -->
+    <!-- begin side bar -->
+<div class="row">
     
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <div class="container-fluid col s6 m3 l2 z-depth-3" id="side-bar">
+            <h4>Menu</h4>
+            <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtna" href="see-all">
+                <span class="material-icons">pets</span> See All Pets
+            </a>
+            <hr>
+            <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn1" href="specificpets">
+                <span class="material-icons">pets</span>Pets by Type
+            </a>
+            <hr>
+            <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn2" href="post-pet">
+                <span class="material-icons">pets</span> Post Your Pet
+            </a>
+            <hr>
+            <a class="waves-effect waves-light btn-small #37474f blue-grey darken-3" id="sideBtn3" href="apply">
+                <span class="material-icons">pets</span> Apply to Adopt
+            </a>
+            <hr>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
-
-
+        </div>
+            <!-- end side bar -->
+    
     <div class="container-fluid col s12 m8 l9" id="applyForm">
-
+        
         <h2>Join our network!</h2>
-        <p>Enter your name and email to receive weekly updates about our eligible pets!</p>
-        <div class="row">
-            <form class="col m8 offset-m2 s12">
+        <form id="signupForm">
+            <div class="row">
+                <p>Enter your name and email to receive weekly updates about our eligible pets!</p>
+                <form class="col m8 offset-m2 s12">
                 <div class="row">
-                    <div class="input-field col s12">
+
+                        <div class="input-field col s12">
                         <input id="Name" type="text" class="validate">
                         <label for="news-name">Full Name</label>
-                    </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="Email" type="text" class="validate">
-                        <label for="email">Email</label>
-                    </div>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input id="Email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    
+
                 </div>
+
                 <button class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
                     id="verifyBtn">Send me pet
                     updates!
                     <i class="material-icons right">account_circle</i>
                 </button>
-        </div>
+            
+            </div>
+        </form>
     </div>
+
+       
+       
 </div>
-</form>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" ></script>
 </body>
 
 <script src="./js/signup.js"></script>
