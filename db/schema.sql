@@ -10,7 +10,7 @@ CREATE TABLE Animals (
   AnimalName VARCHAR (64) NOT NULL,
   Age INT NOT NULL,
   About VARCHAR (512) NOT NULL,
-  ImageLink VARCHAR (1024) NULL,
+  ImageLink VARCHAR (1024)
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL
 );
