@@ -1,9 +1,9 @@
 INSERT INTO
   Animals (
     TypeName,
+    AnimalName,
     OwnerName,
     OwnerEmail,
-    AnimalName,
     Age,
     About,
     ImageLink,
@@ -13,9 +13,9 @@ INSERT INTO
 VALUES
   (
     "Dog",
+    "Rex",
     "John Smith",
     "jsmith@gmail.com",
-    "Rex",
     4,
     "Rex is a pure-bred Great Dane with a calm demeanor.",
     "https://res.cloudinary.com/dnyfzhvqh/image/upload/c_scale,w_300/v1610904726/Peer2Paws/Rex_daoq3k.jpg",
