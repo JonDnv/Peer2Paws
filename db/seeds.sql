@@ -1,12 +1,12 @@
 INSERT INTO
-  peer_2_paws.Animals (
-    ImageLink,
+  Animals (
     TypeName,
     OwnerName,
     OwnerEmail,
     AnimalName,
     Age,
     About,
+    ImageLink,
     createdAt,
     updatedAt
   )
@@ -99,8 +99,8 @@ VALUES
     CURDATE(),
     CURDATE()
   )
-INSERT INTO 
-  peer_2_paws.EmailRecepients (RecName, RecEmail, createdAt, updatedAt)
+INSERT INTO
+  EmailRecepients (RecName, RecEmail, createdAt, updatedAt)
 VALUES
   (
     "John Smith",
