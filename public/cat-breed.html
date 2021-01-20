@@ -6,11 +6,28 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <nav>
+        <div class="nav-wrapper #607d8b blue-grey z-depth-3" id="navBar">
+            <a href="#" class="brand-logo" style="font-family: Salsa, cursive;">Peer 2 Paws</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/" style="font-family: Salsa, cursive;">Home</a></li>
+                <li><a href="signup" style="font-family: Salsa, cursive;">Get Updates/Sign-up</a></li>
+                <li><a href="contact" style="font-family: Salsa, cursive;">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
   <div id="app">
     <v-app>
       <v-content>
@@ -273,13 +290,10 @@
             async getBreeds()
             {
                 try{
-                    axios.defaults.headers.common['x-api-key'] = "d00669c9-8b2e-437f-ae3d-62bd97c2ee83" // Replace this with your API Key, as it's set to defaults it will be used from now onwards
-                    
+                    axios.defaults.headers.common['x-api-key'] = "d00669c9-8b2e-437f-ae3d-62bd97c2ee83" 
                     let response = await axios.get('https://api.thecatapi.com/v1/breeds/' ) 
                     this.breeds = response.data;
                     console.log("-- ("+this.breeds.length +") Breeds from TheCatAPI.com")
-                    
-                    // pick one to display initially
                     this.selected_breed = this.breeds[10]
                 }catch(err){
                     console.log(err)
