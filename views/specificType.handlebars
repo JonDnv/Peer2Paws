@@ -6,12 +6,18 @@
     {{> sidebar-partial}}
 
     <div class="container-fluid col s12 m8 l9">
-
-        <h2>All Our</h2>
-
+        <div class='row'>
+            <h2>
+                {{#if Animal}}
+                All Our {{Animal.TypeName}}
+                {{/if}}
+            </h2>
+            <a href="specificpets">Back</a>
+        </div>
         <ul class="col s7 push-s1">
-            {{#each pets}}
+            {{#each Animal}}
             <p id="petsCard">
+                <img src="{{ImageLink}}"><br>
                 Type: {{TypeName}}<br>
                 Name: {{AnimalName}}<br>
                 Age: {{Age}}<br>
