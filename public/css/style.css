@@ -39,13 +39,10 @@ p,
   border-radius: 5px;
 }
 
-#mainContent {
-  text-align: center;
-}
-
 #applyForm,
 #signinForm,
 #signupForm,
+#breedInfo,
 #applyBtn,
 #postBtn {
   margin-left: 10px;
@@ -59,10 +56,17 @@ p,
   margin-left: 30px;
 }
 
+#specificForm {
+  padding: 50px;
+  text-align: center;
+  margin-left: 100px;
+}
+
 .responsive-img {
-  margin-left: 50%;
+  margin-left: 45%;
   /* position: relative; */
   text-align: center;
+  box-shadow: 10px 10px 10px #607d8b;
 }
 
 .label {
@@ -88,10 +92,16 @@ p,
   box-shadow: 10px 10px 10px #607d8b;
 }
 
-#animalRow {
+#animalRow,
+#typePets {
   margin-left: 100px;
 }
 
 #catBreedInfo {
   margin-top: 18px;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
 }
