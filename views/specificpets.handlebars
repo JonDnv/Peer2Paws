@@ -4,41 +4,49 @@
 
     {{> sidebar-partial}}
 
-    <div class="container-fluid col s12 m8 l9" id="specificForm">
+    <div class="container-fluid col s12 m8 l9">
         <h2>View Pets by Type</h2>
-        <div class='row'>
-            <a href='dog'>View Dogs</a>
-            <a href='cat'>View Cats</a>
-            <a href='bird'>View Birds</a>
-            <a href='rodent'>View Rodents</a>
-            <a href='reptile'>View Reptiles</a>
+        <div class='row' id="specificForm">
+            <div class="col s3 m5 l2">
+                {{> dogIcon-partial}}
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="dogType" href="dog">Dogs
+                </a>
+            </div>
+            <div class="col s3 m5 l2">
+                {{> catIcon-partial}}
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="catType" href="cat">Cats
+                </a>
+            </div>
+            <div class="col s3 m5 l2">
+                {{> birdIcon-partial}}
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="birdType" href="bird">Birds
+                </a>
+            </div>
+            <div class="col s3 m5 l2">
+                {{> rodentIcon-partial}}
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="rodentType" href="rodent">Rodents
+                </a>
+            </div>
+            <div class="col s3 m5 l2">
+                {{> reptileIcon-partial}}
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="reptileType" href="reptile">Reptiles
+                </a>
+            </div>
+
         </div>
 
-        {{!-- <form class="col m8 offset-m2 s12">
-            <label>Select a Type</label>
-            <select class="browser-default" id='selectedType'>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Dog</option>
-                <option value="2">Cat</option>
-                <option value="3">Bird</option>
-                <option value="4">Rodent</option>
-                <option value="5">Reptile</option>
-            </select> --}}
+        <div class="divider"></div>
 
-            <div class="divider"></div>
-            <div class="row">
-                <div class="col m12">
-                    <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
-                        id="sheltersBtn" href="/api/specificpets/:pet?">View
-                        <span class="material-icons right">pets</span>
-                    </a>
-                </div>
-            </div>
         </form>
 
 
         <div class="divider"></div>
-        <div class="row">
+        <div class="row" id="breedInfo">
             <div class="col s6" id="dogBreedInfo">
                 {{> dedit-partial}}
                 <p>To see information about different dog breeds, click below</p>

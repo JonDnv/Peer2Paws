@@ -5,14 +5,18 @@
 
     {{> sidebar-partial}}
 
-    <div class="container-fluid col s12 m8 l9">
+    <div class="container-fluid col s12 m8 l9" id="typePets">
         <div class='row'>
             <h2>
                 {{#if Animal}}
-                All Our {{Animal.TypeName}}
+                {{Animal.TypeName}}
                 {{/if}}
             </h2>
-            <a href="specificpets">Back</a>
+            <div class="col s3 m5 l2">
+                <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
+                    id="backType" href="specificpets">Go Back
+                </a>
+            </div>
         </div>
         <ul class="col s7 push-s1">
             {{#each Animal}}
