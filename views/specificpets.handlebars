@@ -6,7 +6,15 @@
 
     <div class="container-fluid col s12 m8 l9" id="specificForm">
         <h2>View Pets by Type</h2>
-        <form class="col m8 offset-m2 s12">
+        <div class='row'>
+            <a href='dog'>View Dogs</a>
+            <a href='cat'>View Cats</a>
+            <a href='bird'>View Birds</a>
+            <a href='rodent'>View Rodents</a>
+            <a href='reptile'>View Reptiles</a>
+        </div>
+
+        {{!-- <form class="col m8 offset-m2 s12">
             <label>Select a Type</label>
             <select class="browser-default" id='selectedType'>
                 <option value="" disabled selected>Choose your option</option>
@@ -15,13 +23,13 @@
                 <option value="3">Bird</option>
                 <option value="4">Rodent</option>
                 <option value="5">Reptile</option>
-            </select>
+            </select> --}}
 
             <div class="divider"></div>
             <div class="row">
                 <div class="col m12">
                     <a class="btn waves-effect waves-light #37474f blue-grey darken-3" type="submit" name="action"
-                        id="sheltersBtn" href="#">View
+                        id="sheltersBtn" href="/api/specificpets/:pet?">View
                         <span class="material-icons right">pets</span>
                     </a>
                 </div>

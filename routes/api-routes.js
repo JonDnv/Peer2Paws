@@ -15,15 +15,95 @@ module.exports = (app) => {
     );
     });
 
-//JK--API call to view and render specific types--//
-// app.get('/api/:specificpets?', (req, res) => {
-//     Animals.Animal.findAll({
-//       where: {
-//         routeName: req.params.Animals
-//       }
-//     }).then((result) => res.json(result))
-// })
- 
+    /////JK--Begin calling for Specific Types--/////
+
+    //--For Dogs--//
+    app.get('/dog', (req, res) => {
+      Animals.Animal.findAll({
+        where: {
+          TypeName: 'Dog',
+        },
+      }).then((Animal) => {
+        res.render('specificType', {
+          Animal: true,
+          Animal: JSON.parse(JSON.stringify(Animal))
+        })
+      })
+    });
+
+  //--Cats--//
+    app.get('/cat', (req, res) => {
+      Animals.Animal.findAll({
+        where: {
+          TypeName: 'Cat',
+        },
+      }).then((Animal) => {
+        res.render('specificType', {
+          Animal: true,
+          Animal: JSON.parse(JSON.stringify(Animal))
+        })
+      })
+    });
+
+  //--Birds--//
+    app.get('/bird', (req, res) => {
+      Animals.Animal.findAll({
+        where: {
+          TypeName: 'Bird',
+        },
+      }).then((Animal) => {
+        res.render('specificType', {
+          Animal: true,
+          Animal: JSON.parse(JSON.stringify(Animal))
+        })
+      })
+    });
+  
+  //--Rodents--//
+    app.get('/rodent', (req, res) => {
+      Animals.Animal.findAll({
+        where: {
+          TypeName: 'Rodent',
+        },
+      }).then((Animal) => {
+        res.render('specificType', {
+          Animal: true,
+          Animal: JSON.parse(JSON.stringify(Animal))
+        })
+      })
+    });
+
+  //--Reptiles--//
+    app.get('/reptile', (req, res) => {
+      Animals.Animal.findAll({
+        where: {
+          TypeName: 'Reptile',
+        },
+      }).then((Animal) => {
+        res.render('specificType', {
+          Animal: true,
+          Animal: JSON.parse(JSON.stringify(Animal))
+        })
+      })
+    });
+
+/////JK--End of API calls for specific Types--/////
+
+    // app.get("/api/specificpets/:pet?", (req, res) => {
+    //   // res.render("specificType");
+    //   if (req.params.pet) {
+    //     routeName = document.getElementById('selectedType').value.trim();
+    //     Animals.Animal.findAll({
+    //       where : {
+    //         routeName: req.params.pet,
+    //       },
+    //     }).then((result) => res.json(result))
+    //       .then((data) => {
+    //         res.render('specificType', {
+    //           Animal: data
+    //         })
+    //       })
+    //   }
 
 /////--API CALLS TO POST FROM FORMS @ FRONT END--/////
 

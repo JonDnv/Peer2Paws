@@ -1,5 +1,5 @@
 const path = require("path");
-const Animals = require('../models')
+// const Animals = require('../models')
 
 module.exports = function (app) {
   //Routes for different pages - NAV BAR
@@ -7,8 +7,12 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  app.get("/sign-in", (req, res) => {
-    res.render("sign-in")
+//   app.get("/signup", (req, res) => {
+//     res.render("signup")
+// });
+
+app.get("/signup", (req,res) => {
+  res.sendFile(path.join(__dirname, '../public/signup.html'))
 });
 
 
@@ -26,30 +30,13 @@ module.exports = function (app) {
     res.render("specificpets");
   });
 
-  app.get("/api/specificpets/:pet?", (req, res) => {
-
-    const pets = document.getElementById('sheltersBtn').value.trim();
-
-    Animals.Animal.findAll({
-        where: {
-            routeName: pets
-        }
-    })
-    .then((data) => {
-            res.render('specificType', {
-                pets: data
-            })
-    })
-      
-    });
-
   app.get("/post-pet", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/post-pet.html"));
   });
 
-  app.get("/signup", (req,res) => {
-    res.sendFile(path.join(__dirname, '../public/signup.html'))
-});
+//   app.get("/signup", (req,res) => {
+//     res.sendFile(path.join(__dirname, '../public/signup.html'))
+// });
 
   app.get("/apply", (req, res) => {
     res.render("apply");
