@@ -27,11 +27,11 @@ fetch('/api/signup', {
     .catch((error) => {
         console.error('Error:', error);
         alert(error);
-    });
+    })
 
 //JK--Clearing the form--//
 
-document.getElementById('Name').value = '';
+document.getElementById('news-name').value = '';
 document.getElementById('Email').value = '';
 
 });
