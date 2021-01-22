@@ -6,7 +6,7 @@ updateBtn.addEventListener('click', (e) => {
 
 //JK--Retrieve data of New Member--//
     const newMember = {
-        Name: document.getElementById('Name').value.trim(),
+        Name: document.getElementById('news-name').value.trim(),
         Email: document.getElementById('Email').value.trim(),
     };
 
